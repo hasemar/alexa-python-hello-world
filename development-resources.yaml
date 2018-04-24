@@ -63,7 +63,7 @@ Resources:
       Description: Packages the lambda backend for the Alexa skill
       Source:
         Type: GITHUB
-        Location: https://github.com/spockNinja/alexa-python-hello-world.git
+        Location: https://github.com/hasemar/alexa-python-hello-world.git
         BuildSpec: buildspec.yaml
       ServiceRole:
         Fn::GetAtt: [LambdaPackageJobRole, Arn]
