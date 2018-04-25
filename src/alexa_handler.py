@@ -16,11 +16,11 @@ def get_welcome_response(session):
     """
     card_title = "Welcome"
 
-    speech_output = "Welcome to my python skill. You can search for GitHub repositories. "
+    speech_output = "Natalie Claire Hausman of course. "
 
     # If the user either does not reply to the welcome message or says something
     # that is not understood, they will be prompted again with this text.
-    reprompt_text = "Ask me to search GitHub for a repository. "
+    reprompt_text = "Neener Neener. "
 
     session_attributes = session.get('attributes', {})
 

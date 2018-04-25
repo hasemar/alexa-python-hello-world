@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "who is the bratiest kid in the world",
+            "invocationName": "",
             "intents": [
                 {
                     "name": "AMAZON.CancelIntent",
@@ -16,8 +16,7 @@
                     "name": "AMAZON.HelpIntent",
                     "samples": [
                         "help",
-                        "what",
-                        "who's"
+                        "what"
                     ]
                 },
                 {
