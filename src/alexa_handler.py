@@ -16,11 +16,11 @@ def get_welcome_response(session):
     """
     card_title = "Welcome"
 
-    speech_output = "Natalie Claire Hausman of course. "
+    speech_output = "What would you like me to do? "
 
     # If the user either does not reply to the welcome message or says something
     # that is not understood, they will be prompted again with this text.
-    reprompt_text = "Neener Neener. "
+    reprompt_text = "I'm still waiting for your instructions."
 
     session_attributes = session.get('attributes', {})
 
@@ -60,6 +60,19 @@ def search_results(intent, session):
     )
     return build_response(session.get('attributes', {}), speechlet_response)
 
+def about_family(intent, session):
+    """
+    Messing with my kids
+    """
+    query = intent['slots']['query']['value']
+    results = get_response(query)
+    card_title = " About" + query
+
+    speechlet_response - build_speechlet_response(
+        card_title,
+        results
+    )
+    return build_response(session.get('attributes',{}), speechlet_response)
 
 def handle_session_end_request():
     """

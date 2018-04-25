@@ -22,7 +22,8 @@
                 {
                     "name": "AMAZON.StopIntent",
                     "samples": [
-                        "stop"
+                        "stop",
+                        "knock it of"
                     ]
                 },
                 {
@@ -39,9 +40,49 @@
                         "search for {query}",
                         "search github for {query}"
                     ]
+                },
+                {
+                    "name": "AboutFamily",
+                    "slots": [
+                        {
+                            "name": "query",
+                            "type": "FAMILY_MEMBER"
+                        }
+                    ],
+                    "samples": [
+                        "tell me about {query}",
+                        "what is {query} like",
+                        "can you tell me about {query}"
+                        ]
                 }
             ],
-            "types": []
+            "types": [
+                {
+                    "name": "FAMILY_MEMBER",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Natalie"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Oliva"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Sarah"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ryan"
+                            }
+                        }
+                    ]
+                }
+            ]
         },
         "dialog": {
             "intents": [
@@ -57,6 +98,22 @@
                             "elicitationRequired": true,
                             "prompts": {
                                 "elicitation": "Elicit.Slot.488787468561.1421835813748"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "AboutFamily",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "query",
+                            "type": "FAMILY_MEMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Intent-AboutFamily.query.FAMILY_MEMBER"
                             }
                         }
                     ]
