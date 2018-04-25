@@ -129,6 +129,15 @@
                         "value": "What should I search for?"
                     }
                 ]
+            },
+            {
+                "id": "Elicit.Intent-AboutFamily.query.FAMILY_MEMBER",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Who do you want to know about?"
+                    }
+                ]
             }
         ]
     }
